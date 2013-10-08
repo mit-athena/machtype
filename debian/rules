@@ -32,6 +32,12 @@ ifeq ($(call compare_debian_version,8),y)
     SYS_COMPAT += $(call arch_sysnames,amd64_deb80,i386_deb80)
 endif
 
+ifeq ($(DISTRO),Ubuntu)
+    ifeq ($(call compare_ubuntu_version,13.10),y)
+        SYS_COMPAT += $(call arch_sysnames,amd64_ubuntu1310,i386_ubuntu1310)
+    endif
+endif
+
 # Wheezy has had like 3 freezes, all before raring's DIF, so
 # who knows if this order is right.
 ifeq ($(DISTRO),Ubuntu)
