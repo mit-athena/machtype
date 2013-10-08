@@ -1,3 +1,10 @@
+debathena-machtype (10.4) unstable; urgency=low
+
+  * Support Saucy (Trac: #1402)
+  * Fix bug that had incorrect sysnames for Raring.
+
+ -- Jonathan Reed <jdreed@mit.edu>  Tue, 08 Oct 2013 16:23:54 -0400
+
 debathena-machtype (10.3) unstable; urgency=low
 
   * Pretend to support Jessie.
