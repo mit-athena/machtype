@@ -36,7 +36,7 @@ endif
 # who knows if this order is right.
 ifeq ($(DISTRO),Ubuntu)
     ifeq ($(call compare_ubuntu_version,13.04),y)
-        SYS_COMPAT += $(call arch_sysnames,amd64_ubuntu1210,i386_ubuntu1210)
+        SYS_COMPAT += $(call arch_sysnames,amd64_ubuntu1304,i386_ubuntu1304)
     endif
 endif
 
