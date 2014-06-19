@@ -1,3 +1,13 @@
+debathena-machtype (10.5) unstable; urgency=low
+
+  * Move logic for generating sysnames from debian/rules to
+    generate_sysnames.py
+  * Drop support for IRIX and Solaris from source package
+  * Update build-dependencies to reflect new build system
+  * Transition to dh7
+
+ -- Jonathan Reed <jdreed@mit.edu>  Sun, 22 Jun 2014 13:25:21 -0400
+
 debathena-machtype (10.4.1) unstable; urgency=low
 
   * Support Trusty (Trac: #1494)

@@ -2,11 +2,15 @@ Source: debathena-machtype
 Section: debathena/net
 Priority: extra
 Maintainer: Debathena Project <debathena@mit.edu>
-Build-Depends: cdbs, debhelper, dh-buildinfo, autoconf, lsb-release, openafs-client
+Build-Depends: debhelper,
+ lsb-release,
+ python-minimal (>= 2.6~),
 Standards-Version: 3.9.3
 
 Package: debathena-machtype
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: openafs-client (>= 1.4.12+dfsg-3~),
+ ${shlibs:Depends},
+ ${misc:Depends}
 Description: Print Athena machine type to standard output
  Print CPU type and hardware configuration information.
