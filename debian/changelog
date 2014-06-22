@@ -1,9 +1,11 @@
-debathena-machtype (10.4.1) UNRELEASED; urgency=low
+debathena-machtype (10.4.1) unstable; urgency=low
 
   * Support Trusty (Trac: #1494)
   * Add prelim support for Utopic
+  * Add git-buildpackage configuration
+  * Set source format to 3.0 (native)
 
- -- Jonathan Reed <jdreed@mit.edu>  Sun, 22 Jun 2014 13:12:38 -0400
+ -- Jonathan Reed <jdreed@mit.edu>  Sun, 22 Jun 2014 13:16:34 -0400
 
 debathena-machtype (10.4) unstable; urgency=low
 
