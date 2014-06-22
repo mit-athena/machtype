@@ -33,6 +33,12 @@ ifeq ($(call compare_debian_version,8),y)
 endif
 
 ifeq ($(DISTRO),Ubuntu)
+    ifeq ($(call compare_ubuntu_version,14.10),y)
+        SYS_COMPAT += $(call arch_sysnames,amd64_ubuntu1410,i386_ubuntu1410)
+    endif
+    ifeq ($(call compare_ubuntu_version,14.04),y)
+        SYS_COMPAT += $(call arch_sysnames,amd64_ubuntu1404,i386_ubuntu1404)
+    endif
     ifeq ($(call compare_ubuntu_version,13.10),y)
         SYS_COMPAT += $(call arch_sysnames,amd64_ubuntu1310,i386_ubuntu1310)
     endif

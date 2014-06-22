@@ -1,3 +1,10 @@
+debathena-machtype (10.4.1) UNRELEASED; urgency=low
+
+  * Support Trusty (Trac: #1494)
+  * Add prelim support for Utopic
+
+ -- Jonathan Reed <jdreed@mit.edu>  Sun, 22 Jun 2014 13:12:38 -0400
+
 debathena-machtype (10.4) unstable; urgency=low
 
   * Support Saucy (Trac: #1402)
