@@ -108,11 +108,10 @@ distros = [Ubuntu('14.04'),
            Ubuntu('13.10'), Ubuntu('13.04'),
            Debian('7.0', arches=DEFAULT_ARCHES + ('armel',)),
            Ubuntu('12.10'), Ubuntu('12.04'),
-           Ubuntu('11.10'),
            Debian('6.0'),
-           Ubuntu('11.04'),
+           Ubuntu('11.10'), Ubuntu('11.04'),
            Ubuntu('10.10'), Ubuntu('10.04'),
-           Ubuntu('9.10'),  Ubuntu('9.04'),
+           Ubuntu('9.04'),
            Debian('4.0.4', sysver='5.0'),
            Ubuntu('8.04'),
            Debian('4.0')]
@@ -132,14 +131,14 @@ if len(sysnames) < len(archlist(ARCH)):
     fail("Insufficient number of sysnames, cannot proceed.",
          "sysnames: {0}".format(sysnames))
 
-if len(sysnames) > MAX_SYSNAMES:
-    fail("Sysname list too long")
-
 sysname = sysnames.pop(0)
 sysnames += ['i386_rhel4']
 
 if not compare_versions(DEBIAN_VERSION, 'ge', '7.0'):
     sysnames += ['i386_rhel3', 'i386_linux24']
+
+if len(sysnames) + 1 > MAX_SYSNAMES:
+    fail("Sysname list too long")
 
 if IS_UBUNTU and (Ubuntu(UBUNTU_VERSION).sysnames()[0] != sysname):
     fail("Sysname mismatch -- is this a new release?",

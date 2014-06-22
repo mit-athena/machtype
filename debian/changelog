@@ -1,3 +1,11 @@
+debathena-machtype (10.5.1) unstable; urgency=low
+
+  * Fix a bug that resulted in 33 sysnames on some platforms
+  * Drop Karmic from the compatibility list, because that was 4.5 years
+    ago
+
+ -- Jonathan Reed <jdreed@mit.edu>  Sun, 22 Jun 2014 19:03:19 -0400
+
 debathena-machtype (10.5) unstable; urgency=low
 
   * Move logic for generating sysnames from debian/rules to
