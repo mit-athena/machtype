@@ -1,3 +1,9 @@
+debathena-machtype (10.5.3) UNRELEASED; urgency=low
+
+  * Depend on lsb-release (Trac: #1376)
+
+ -- Jonathan Reed <jdreed@mit.edu>  Wed, 01 Oct 2014 19:28:07 -0400
+
 debathena-machtype (10.5.2) unstable; urgency=low
 
   * Fix a regression where Quantal's position got moved to be "older" than
