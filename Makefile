@@ -8,6 +8,7 @@ ATHENA_MINOR_VERSION = 0
 SYSNAMES := $(shell ./generate_sysnames.py)
 MACHTYPE_ATHENA_SYS := $(word 1, $(SYSNAMES))
 MACHTYPE_ATHENA_SYS_COMPAT := $(word 2, $(SYSNAMES))
+MACHTYPE_ATHENA_SYS_DEPRECATED := $(word 3, $(SYSNAMES))
 ifeq ($(MACHTYPE_ATHENA_SYS),)
     $(error MACHTYPE_ATHENA_SYS unset)
 endif
@@ -25,6 +26,7 @@ machtype.sh: ${OS_SCRIPT}
 	    -e 's/@ATHENA_MINOR_VERSION@/${ATHENA_MINOR_VERSION}/' \
 	    -e 's/@ATHENA_SYS@/${MACHTYPE_ATHENA_SYS}/' \
 	    -e 's/@ATHENA_SYS_COMPAT@/${MACHTYPE_ATHENA_SYS_COMPAT}/' \
+	    -e 's/@ATHENA_SYS_DEPRECATED@/${MACHTYPE_ATHENA_SYS_DEPRECATED}/' \
 	    ${OS_SCRIPT} > $@
 
 install:

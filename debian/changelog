@@ -1,8 +1,11 @@
-debathena-machtype (10.5.3) UNRELEASED; urgency=low
+debathena-machtype (10.5.3) unstable; urgency=low
 
   * Depend on lsb-release (Trac: #1376)
+  * Add support for Utopic (Trac: #1537)
+  * Keep track of deprecated sysnames so that attach/add can use them in
+    the future, by adding a new "-D" option to machtype"
 
- -- Jonathan Reed <jdreed@mit.edu>  Wed, 01 Oct 2014 19:28:07 -0400
+ -- Jonathan Reed <jdreed@mit.edu>  Wed, 01 Oct 2014 19:31:08 -0400
 
 debathena-machtype (10.5.2) unstable; urgency=low
 

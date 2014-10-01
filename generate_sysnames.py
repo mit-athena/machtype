@@ -71,15 +71,21 @@ class Distro(object):
         self.arches = kwargs.get('arches', DEFAULT_ARCHES)
         self.sysver = digits.sub('', kwargs.get('sysver', version))
         self.sysprefix = kwargs.get('sysprefix', 'linux')
+        self.deprecated = kwargs.get('deprecated', False)
 
-    def suitable(self):
+    def suitable(self, include_deprecated=False):
         if ARCH not in self.arches:
             return False
         if not compare_versions(self.vercmp, 'ge', self.version):
             return False
         if not IS_UBUNTU and isinstance(self, Ubuntu):
             return False
+        if self.deprecated and not include_deprecated:
+            return False
         return True
+
+    def historic(self):
+        return self.suitable(include_deprecated=True) and self.deprecated
 
     def sysnames(self):
         rv = []
@@ -104,14 +110,18 @@ class Ubuntu(Distro):
 
 # The master distro order
 # Update this when a new release comes online
-distros = [Ubuntu('14.04'),
+# add "deprecated=True" to distros when we stop building for
+# them.
+distros = [Ubuntu('14.10'),
+           Ubuntu('14.04'),
            Ubuntu('13.10'), Ubuntu('13.04'),
            Debian('7.0', arches=DEFAULT_ARCHES + ('armel',)),
            Ubuntu('12.10'), Ubuntu('12.04'),
-           Ubuntu('11.10'),
+           Ubuntu('11.10', deprecated=True),
            Debian('6.0'),
            Ubuntu('11.04'),
-           Ubuntu('10.10'), Ubuntu('10.04'),
+           Ubuntu('10.10', deprecated=True), Ubuntu('10.04'),
+           Ubuntu('9.10', deprecated=True),
            Ubuntu('9.04'),
            Debian('4.0.4', sysver='5.0'),
            Ubuntu('8.04'),
@@ -128,6 +138,9 @@ if not compare_versions(DEBIAN_VERSION, 'ge', '3.1'):
 sysnames = list(
     itertools.chain(*[d.sysnames() for d in distros if d.suitable()]))
 
+deprecated_sysnames = list(
+    itertools.chain(*[d.sysnames() for d in distros if d.historic()]))
+
 if len(sysnames) < len(archlist(ARCH)):
     fail("Insufficient number of sysnames, cannot proceed.",
          "sysnames: {0}".format(sysnames))
@@ -137,6 +150,8 @@ sysnames += ['i386_rhel4']
 
 if not compare_versions(DEBIAN_VERSION, 'ge', '7.0'):
     sysnames += ['i386_rhel3', 'i386_linux24']
+else:
+    deprecated_sysnames += ['i386_rhel3', 'i386_linux24']
 
 if len(sysnames) + 1 > MAX_SYSNAMES:
     fail("Sysname list too long")
@@ -152,7 +167,9 @@ elif not IS_UBUNTU:
              "{0} != {1}".format(Debian(deb_ver_compare).sysnames()[0],
                                  sysname))
 
-print "{sysname} {syscompat}".format(
+print "{sysname} {syscompat} {deprecated}".format(
     sysname=sysname.strip(),
-    syscompat=':'.join([x.strip() for x in sysnames]))
+    syscompat=':'.join([x.strip() for x in sysnames]),
+    deprecated=':'.join([x.strip() for x in deprecated_sysnames]),
+)
 sys.exit(0)

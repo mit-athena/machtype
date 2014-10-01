@@ -12,6 +12,7 @@
 #  -v     : more verbose -- about memory mainly
 #  -A     : print Athena Release
 #  -C     : print out compatible Athena System names
+#  -D     : Print out deprecated compatible Athena System names
 #  -E     : print out the version of the Base OS
 #  -L     : version of athena from /etc/athena/version
 #  -M     : physical memory
@@ -24,7 +25,7 @@
 PATH=/bin:/usr/bin:/sbin:/usr/sbin
 QUICKSTATION_FILE=/afs/athena.mit.edu/system/config/quick/quickstations
 
-while getopts cdk:m:rvACELMNPSq i; do
+while getopts cdk:m:rvACDELMNPSq i; do
 	case "$i" in
 	c)
 		cpu=1
@@ -53,6 +54,9 @@ while getopts cdk:m:rvACELMNPSq i; do
 		;;
 	C)
 		ath_sys_compat=1
+		;;
+	D)
+		ath_sys_deprecated=1
 		;;
 	E) 	
 		base_os_ver=1
@@ -133,6 +137,11 @@ fi
 
 if [ $ath_sys_compat ]; then
 	echo "@ATHENA_SYS_COMPAT@"
+	printed=1
+fi
+
+if [ $ath_sys_deprecated ]; then
+	echo "@ATHENA_SYS_DEPRECATED@"
 	printed=1
 fi
 
