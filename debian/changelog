@@ -1,3 +1,10 @@
+debathena-machtype (10.5.4) unstable; urgency=low
+
+  * Make openafs-client a build-dep, not a runtime dependency, which it
+    was mistakenly converted to in 10.5 (Trac: #1543)
+
+ -- Jonathan Reed <jdreed@mit.edu>  Thu, 30 Oct 2014 12:21:45 -0400
+
 debathena-machtype (10.5.3) unstable; urgency=low
 
   * Depend on lsb-release (Trac: #1376)

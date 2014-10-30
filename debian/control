@@ -5,12 +5,12 @@ Maintainer: Debathena Project <debathena@mit.edu>
 Build-Depends: debhelper,
  lsb-release,
  python-minimal (>= 2.6~),
+ openafs-client (>= 1.4.12+dfsg-3~),
 Standards-Version: 3.9.3
 
 Package: debathena-machtype
 Architecture: any
-Depends: openafs-client (>= 1.4.12+dfsg-3~),
- lsb-release,
+Depends: lsb-release,
  ${shlibs:Depends},
  ${misc:Depends}
 Description: Print Athena machine type to standard output
