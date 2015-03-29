@@ -1,3 +1,10 @@
+debathena-machtype (10.5.5) unstable; urgency=low
+
+  * Support Vivid.
+  * Drop support for Quantal.
+
+ -- Alexander Chernyakhovsky <achernya@mit.edu>  Sun, 29 Mar 2015 18:32:38 -0400
+
 debathena-machtype (10.5.4) unstable; urgency=low
 
   * Make openafs-client a build-dep, not a runtime dependency, which it

@@ -112,11 +112,13 @@ class Ubuntu(Distro):
 # Update this when a new release comes online
 # add "deprecated=True" to distros when we stop building for
 # them.
-distros = [Ubuntu('14.10'),
+distros = [Ubuntu('15.04'),
+           Ubuntu('14.10'),
            Ubuntu('14.04'),
            Ubuntu('13.10'), Ubuntu('13.04'),
            Debian('7.0', arches=DEFAULT_ARCHES + ('armel',)),
-           Ubuntu('12.10'), Ubuntu('12.04'),
+           Ubuntu('12.10', deprecated=True),
+           Ubuntu('12.04'),
            Ubuntu('11.10', deprecated=True),
            Debian('6.0'),
            Ubuntu('11.04'),
