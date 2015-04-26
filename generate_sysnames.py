@@ -52,6 +52,9 @@ ARCH = os.getenv('OVERRIDE_MACHTYPE_ARCH',
 
 MAX_SYSNAMES = 32
 
+if DEBIAN_VERSION.isdigit():
+    DEBIAN_VERSION += ".0"
+
 # If you use unicode version strings, I hate you
 digits = re.compile("[^0-9]")
 

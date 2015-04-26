@@ -1,3 +1,10 @@
+debathena-machtype (10.5.7) unstable; urgency=medium
+
+  * Let generate_sysnames handle cases where base-files has version string
+    like "8" instead of "8.0".
+
+ -- Victor Vasiliev <vasilvv@mit.edu>  Sun, 26 Apr 2015 14:31:14 -0400
+
 debathena-machtype (10.5.6) unstable; urgency=low
 
   * Add support for Jessie. No distributions dropped since there are no
