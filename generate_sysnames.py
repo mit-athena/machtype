@@ -52,6 +52,8 @@ ARCH = os.getenv('OVERRIDE_MACHTYPE_ARCH',
 
 MAX_SYSNAMES = 32
 
+if '+' in DEBIAN_VERSION:
+    DEBIAN_VERSION = DEBIAN_VERSION.split('+', 1)[0]
 if DEBIAN_VERSION.isdigit():
     DEBIAN_VERSION += ".0"
 
