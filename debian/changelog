@@ -1,3 +1,9 @@
+debathena-machtype (10.5.11) unstable; urgency=medium
+
+  * Add Yakkety and Stretch.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Sun, 13 Nov 2016 16:40:58 -0500
+
 debathena-machtype (10.5.10) unstable; urgency=medium
 
   * Add Xenial and drop Vivid.
