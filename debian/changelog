@@ -1,3 +1,9 @@
+debathena-machtype (10.5.12) unstable; urgency=medium
+
+  * Deprecate Utopic and Vivid.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Sun, 13 Nov 2016 17:36:18 -0500
+
 debathena-machtype (10.5.11) unstable; urgency=medium
 
   * Add Yakkety and Stretch.
