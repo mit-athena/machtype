@@ -1,3 +1,10 @@
+debathena-machtype (10.5.14) unstable; urgency=medium
+
+  * Add Zesty and Artful
+  * Deprecate Wily
+
+ -- Lizhou Sha <slz@mit.edu>  Sat, 06 May 2017 19:03:30 -0400
+
 debathena-machtype (10.5.13) unstable; urgency=medium
 
   * Set the Stretch cutoff to base-files 9.6.
