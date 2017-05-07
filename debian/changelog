@@ -1,3 +1,9 @@
+debathena-machtype (10.5.15) unstable; urgency=medium
+
+  * Adjust base-files version cutoff for Stretch to be after Yakkety
+
+ -- Lizhou Sha <slz@mit.edu>  Sat, 06 May 2017 22:06:39 -0400
+
 debathena-machtype (10.5.14) unstable; urgency=medium
 
   * Add Zesty and Artful

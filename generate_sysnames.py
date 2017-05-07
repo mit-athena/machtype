@@ -119,8 +119,8 @@ class Ubuntu(Distro):
 # them.
 distros = [Ubuntu('17.10'),
            Ubuntu('17.04'),
-           Debian('9.6', sysver='9.0'),
-           Ubuntu('16.10'),
+           Debian('9.6ubuntu6', sysver='9.0'), # set cutoff to be after yakkety
+           Ubuntu('16.10'), # yakkety has base-files 9.6ubuntu5
            Ubuntu('16.04'),
            Ubuntu('15.10', deprecated=True),
            Debian('8.0'),
