@@ -1,3 +1,9 @@
+debathena-machtype (10.5.16) unstable; urgency=medium
+
+  * Deprecate Natty and Yakkety.
+
+ -- Lizhou Sha <slz@mit.edu>  Sat, 11 Nov 2017 17:04:23 -0500
+
 debathena-machtype (10.5.15) unstable; urgency=medium
 
   * Adjust base-files version cutoff for Stretch to be after Yakkety

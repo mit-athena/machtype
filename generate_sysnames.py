@@ -120,7 +120,7 @@ class Ubuntu(Distro):
 distros = [Ubuntu('17.10'),
            Ubuntu('17.04'),
            Debian('9.6ubuntu6', sysver='9.0'), # set cutoff to be after yakkety
-           Ubuntu('16.10'), # yakkety has base-files 9.6ubuntu5
+           Ubuntu('16.10', deprecated=True), # yakkety has base-files 9.6ubuntu5
            Ubuntu('16.04'),
            Ubuntu('15.10', deprecated=True),
            Debian('8.0'),
@@ -134,11 +134,11 @@ distros = [Ubuntu('17.10'),
            Ubuntu('12.04'),
            Ubuntu('11.10', deprecated=True),
            Debian('6.0'),
-           Ubuntu('11.04'),
+           Ubuntu('11.04', deprecated=True),
            Ubuntu('10.10', deprecated=True),
            Ubuntu('10.04'),
            Ubuntu('9.10', deprecated=True),
-           Ubuntu('9.04'),
+           Ubuntu('9.04'),  # First public release of Debathena; do NOT deprecate.
            Debian('4.0.4', sysver='5.0'),
            Ubuntu('8.04'),
            Debian('4.0')]
