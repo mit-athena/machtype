@@ -117,7 +117,7 @@ class Ubuntu(Distro):
 # Update this when a new release comes online
 # add "deprecated=True" to distros when we stop building for
 # them.
-distros = [Debian('10.0'),
+distros = [Debian('10.2ubuntu7', sysver='10.0'), # buster release a year after bionic, so cut-off at eoan
            Ubuntu('18.04'),
            Ubuntu('17.10', deprecated=True),
            Ubuntu('17.04', deprecated=True),

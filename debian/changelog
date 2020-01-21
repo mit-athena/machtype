@@ -1,3 +1,9 @@
+debathena-machtype (10.8) unstable; urgency=low
+
+  * Fix build for bionic, which has a base-files version of 10
+
+ -- Alexander Chernyakhovsky <achernya@mit.edu>  Mon, 20 Jan 2020 19:50:06 -0500
+
 debathena-machtype (10.7) unstable; urgency=medium
 
   * Add Buster.
