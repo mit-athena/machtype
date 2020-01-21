@@ -117,9 +117,10 @@ class Ubuntu(Distro):
 # Update this when a new release comes online
 # add "deprecated=True" to distros when we stop building for
 # them.
-distros = [Ubuntu('18.04'),
-           Ubuntu('17.10'),
-           Ubuntu('17.04'),
+distros = [Debian('10.0'),
+           Ubuntu('18.04'),
+           Ubuntu('17.10', deprecated=True),
+           Ubuntu('17.04', deprecated=True),
            Debian('9.6ubuntu6', sysver='9.0'), # set cutoff to be after yakkety
            Ubuntu('16.10', deprecated=True), # yakkety has base-files 9.6ubuntu5
            Ubuntu('16.04'),
