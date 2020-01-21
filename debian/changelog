@@ -1,3 +1,10 @@
+debathena-machtype (10.7) unstable; urgency=medium
+
+  * Add Buster.
+  * Deprecate Zesty and Artful.
+
+ -- Madars Virza <madars@mit.edu>  Mon, 20 Jan 2020 18:59:27 -0500
+
 debathena-machtype (10.6) unstable; urgency=medium
 
   * Add Bionic.
