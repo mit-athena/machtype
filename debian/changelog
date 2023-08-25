@@ -1,3 +1,9 @@
+debathena-machtype (10.9) unstable; urgency=medium
+
+  * Build for Jammy
+
+ -- Jonathon Weiss <jweiss@mit.edu>  Fri, 25 Aug 2023 15:43:54 -0400
+
 debathena-machtype (10.8) unstable; urgency=low
 
   * Fix build for bionic, which has a base-files version of 10
